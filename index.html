@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penghitungan Skor SKD dan SKB</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Penghitungan Skor SKD dan SKB</h1>
+        <form id="scoreForm">
+            <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama" required>
+            </div>
+            <div class="form-group">
+                <label for="skd">Skor SKD (40%):</label>
+                <input type="number" id="skd" name="skd" placeholder="Masukkan skor SKD" required>
+            </div>
+            <div class="form-group">
+                <label for="skb">Skor SKB (60%):</label>
+                <input type="number" id="skb" name="skb" placeholder="Masukkan skor SKB" required>
+            </div>
+            <div class="form-group">
+                <label for="max_skb">Skor Maksimal SKB: (Tiap Instansi Berbeda)</label>
+                <input type="number" id="max_skb" name="max_skb" placeholder="Masukkan skor maksimal SKB" required>
+            </div>
+            <button type="button" id="calculateButton">Tambahkan ke Tabel</button>
+        </form>
+        <div id="result">
+            <h2>Hasil Tabel:</h2>
+            <table border="1" id="resultTable">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Skor SKD</th>
+                        <th>Skor SKB</th>
+                        <th>Skor Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data akan ditambahkan di sini -->
+                </tbody>
+            </table>
+        </div>
+        <button id="downloadExcel">Download Excel</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
